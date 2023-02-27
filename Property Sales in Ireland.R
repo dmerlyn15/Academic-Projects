@@ -1,3 +1,9 @@
+This dataset entails the property sales in the counties in Ireland in the year 2020 solely for the month of January. 
+The dataset displays sales of apartments across all the  26 counties. The average house price was roughly around 256,000 Euros in 2020 (Slater, S. 2021). 
+When it comes to the most expensive place to buy a house in Ireland, Dublin tops the chart. (Holland, L. Retrieved on 2021, June 25). 
+The 26 counties have been divided into 4 Provinces â€“ Connacht, Leinster, Munster, and Ulster (Republic of Ireland)  for better analysis of this dataset. 
+I also plan to analyze the most expensive and the least expensive counties in terms of property prices. 
+Accordingly, one-sample t tests and  2 sample t tests would be conducted to compare the means of  two groups, while conducting  hypothesis testing. 
 
 ###"R Practice-Module 4"###
 
@@ -21,14 +27,14 @@ str(property)
 #Renaming the column names in the dataframe 'property'
 property <- property %>% dplyr::rename(date_of_sale = Date.of.Sale..dd.mm.yyyy.,
                                        postal_code = Postal.Code, 
-                                       price = Price..â...,
+                                       price = Price..Ã¢...,
                                        not_full_market_price = Not.Full.Market.Price,
                                        vat_exclusive = VAT.Exclusive,
                                        property_description = Description.of.Property)
 
   
 #Using the 'replace' function to cut out the non numeric special characters in the price column  
-property$price = str_replace(property$price,"â,¬","")
+property$price = str_replace(property$price,"Ã¢,Â¬","")
 
 #Removing commas in the price column using the gsub function to ease with type conversion
 property$price <- gsub(",","",property$price)  
