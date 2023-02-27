@@ -1,3 +1,15 @@
+#The EPA website provides a vast amount of data on public water systems (PWS) across the United States. 
+#On the topic of violations, my goal was to find the worst offenders across the board. 
+#The scope of this question was complex, and I would be attempting to approach the problem from several angles before deciding on a single solution. 
+#I would be leveraging two main datasets available through the EPA’s Data Downloads page. 
+#These would be the SWDA Violations and SWDA Serious Violators consisting of 1,048,576 and 54805 instances respectively. 
+#The variables that I would be focusing on are  State name, city served, Fiscal Year, PWSID, PWS size, Rule Name, and Serious Violator.
+#Considering that I would be looking for the worst offenders, my approach would be to tackle the most serious violations first to acquire insight into the data. 
+#I would aim to arrive upon the top 10 states and the top 10 cities within each of these states which are repeat serious violators. 
+
+
+
+
 #!/usr/bin/env python
 # coding: utf-8
 
